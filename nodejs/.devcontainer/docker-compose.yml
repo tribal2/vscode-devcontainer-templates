@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
+        NODE_VERSION: ${NODE_VERSION}
+        ALPINE_VERSION: ${ALPINE_VERSION}
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 8080:8080
+      - 9229:9229
+    command: sleep infinity
