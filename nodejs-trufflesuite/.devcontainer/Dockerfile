@@ -17,7 +17,8 @@ RUN set -ex \
         truffle \
         ganache-cli \
     # Other setup
-    && echo "alias ll='ls -lah'" >> /root/.profile
+    && echo "alias ll='ls -lahvF --group-directories-first'" \
+        | tee -a /root/.profile /root/.bashrc
 
 COPY package*.json ./
 RUN npm install --no-progress --ignore-optional
