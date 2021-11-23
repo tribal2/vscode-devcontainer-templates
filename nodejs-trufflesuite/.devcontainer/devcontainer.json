@@ -6,6 +6,15 @@
   "service": "app",
   "workspaceFolder": "/app",
 
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "juanblanco.solidity",
+    "dbaeumer.vscode-eslint",
+    "steoates.autoimport",
+    "ChakrounAnas.turbo-console-log",
+    "github.copilot",
+  ],
+
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "terminal.integrated.profiles.linux": {
@@ -15,15 +24,6 @@
     },
     "terminal.integrated.defaultProfile.linux": "bash",
   },
-
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "juanblanco.solidity",
-    "dbaeumer.vscode-eslint",
-    "steoates.autoimport",
-    "ChakrounAnas.turbo-console-log",
-    "github.copilot",
-  ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
